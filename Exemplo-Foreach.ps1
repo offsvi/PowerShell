@@ -7,3 +7,7 @@ foreach ($arquivos in Get-ChildItem) {
 if ($arquivos.IsReadOnly){
 Write-Host $arquivos.FullName}
 }
+
+# Esse exemplo mostra programas que estã sendo executados no computador e está pedindo para que feche todos em execução
+
+Get-Process Notepad | foreach kill 
